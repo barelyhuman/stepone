@@ -10,5 +10,5 @@ Based on this checklist [macOS Setup Checklist](https://reaper.im/blog/macbook-s
 Run the following command on your system
 
 ```sh
-    /bin/bash -c "$(curl -fsSL https://curl-scripts.barelyhuman.dev/stepone/setup.sh)"
+/bin/bash -c "$(curl -fsSL https://curl-scripts.barelyhuman.dev/stepone/setup.sh)"
 ```
