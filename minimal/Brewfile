@@ -1,0 +1,30 @@
+tap "adoptopenjdk/openjdk"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+# Languages
+brew "go"
+
+# Base Utils
+brew "git"
+brew "make"
+brew "vim"
+brew "wget"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "postgresql"
+brew "entr"
+
+# UI Tools
+cask "firefox"
+cask "rectangle"
+cask "sublime-text"
+cask "tableplus"
+cask "iterm2"
+cask "rar"
+cask "vlc"
+
+
+
