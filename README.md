@@ -1,14 +1,19 @@
 # stepone
 
-Initial Macbook Setup scripts
+This is what I have setup on my macbook right now this doesn't configure anything
+but vim and zsh.
 
-Shell scripts for my initial setup on macbook.
-Based on this checklist [macOS Setup Checklist](https://reaper.im/blog/macbook-setup-checklist)
+It creates a fresh install for apps that'll need to be configured
+since I like starting from scratch
 
-## Usage
+## usage
 
-Run the following command on your system
+1. download this as zip
+2. extract and change into the folder
+3. run the `./setup.sh` script
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://curl-scripts.barelyhuman.dev/stepone/setup.sh)"
+sh setup.sh
+# or
+./setup.sh
 ```
