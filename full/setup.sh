@@ -48,3 +48,10 @@ tar -xvzf ./hermit.tar.gz -C ./hermit
 cp -r ./hermit/* ~/Library/Fonts
 rm -rf hermit
 rm hermit.tar.gz
+
+# iterm-themes
+mkdir -p ~/iterm-themes
+cd iterm-themes
+curl -L https://raw.githubusercontent.com/catppuccin/iterm/main/colors/catppuccin-mocha.itermcolors -o catppuccin-mocha.itermcolors
+open ./*.itermcolors
+cd -
