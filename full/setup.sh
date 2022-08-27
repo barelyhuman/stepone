@@ -52,6 +52,6 @@ rm hermit.tar.gz
 # iterm-themes
 mkdir -p ~/iterm-themes
 cd iterm-themes
-curl -L https://raw.githubusercontent.com/catppuccin/iterm/main/colors/catppuccin-mocha.itermcolors -o catppuccin-mocha.itermcolors
+curl -L https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-grayscale.dark.256.itermcolors -o base16-grayscale.dark.256.itermcolors
 open ./*.itermcolors
 cd -
