@@ -48,4 +48,4 @@ cask "telegram"
 cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
-mas "Xcode", id: 497799835
+cask "xcodes"

@@ -8,6 +8,9 @@ set -euxo pipefail
 
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # uses the accompanying ~/Brewfile
 brew bundle install
 
@@ -25,13 +28,12 @@ nvm install --lts
 # doesn't work on M1
 # nvm install 10
 # nvm install 12
-nvm install 14
+# nvm install 14
 nvm install 16
 nvm alias default 14
 
 ## Vim 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-cp ../.vimrc ~/.vimrc
+curl -sL  https://gist.githubusercontent.com/barelyhuman/16285b2195cfd25d8c84356676cc807d/raw/.vimrc > ~/.vimrc
 
 # base folders
 mkdir -p ~/code

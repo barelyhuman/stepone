@@ -3,6 +3,9 @@ set -euxo pipefail
 
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # uses the accompanying ~/Brewfile
 brew bundle install
 
@@ -17,24 +20,17 @@ echo "source ~/.zsh_themes/minzsh.zsh-theme" >>~/.zshrc
 # Languages support
 echo "export PATH=$PATH:$HOME/go/bin" >>~/.zshrc
 
-## nimrod / nimlang / whatever it's new name is
-curl https://nim-lang.org/choosenim/init.sh -sSf | sh
-choosenim stable
-choosenim 1.6.4
-
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | zsh
 source $HOME/.nvm/nvm.sh
 nvm install --lts
 # doesn't work on M1
 # nvm install 10
 # nvm install 12
-nvm install 14
 nvm install 16
-nvm alias default 14
+nvm alias default 16
 
 ## Vim 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-cp ../.vimrc ~/.vimrc
+curl -sL  https://gist.githubusercontent.com/barelyhuman/16285b2195cfd25d8c84356676cc807d/raw/.vimrc > ~/.vimrc
 
 # base folders
 mkdir -p ~/code
@@ -51,7 +47,12 @@ rm hermit.tar.gz
 
 # iterm-themes
 mkdir -p ~/iterm-themes
-cd iterm-themes
+cd ~/iterm-themes
 curl -L https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-grayscale.dark.256.itermcolors -o base16-grayscale.dark.256.itermcolors
 open ./*.itermcolors
 cd -
+
+# Install vim plugins
+vim +'PlugInstall --sync' +qa
+
+
